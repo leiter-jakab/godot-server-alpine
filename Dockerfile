@@ -13,4 +13,5 @@ FROM leiterjakab/alpine-glibc
 RUN addgroup godot \
 	&& adduser -G godot -D godot
 
-COPY --from=builder --chown=godot:godot /Godot_v3.2.3-stable_linux_server.64 /godot/godot
+COPY --from=builder --chown=godot:godot "/Godot_v${GODOT_VERSION}-stable_linux_server.64" /godot/godot
+
