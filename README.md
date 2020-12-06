@@ -26,5 +26,11 @@ CMD ["./godot", "--main-pack", "game-server.pck"]
 
 Fort testing purposes you can also run the container and mount the exported game package.
 
-`docker run --rm -it --name godot-game -p 9999:9999 -v /$PWD/game-server.pck:/godot/game-server.pck -u godot leiterjakab/godot-server-alpine`
-
+```
+docker run --rm -it \
+  --name godot-game \
+  -p 9999:9999 \
+  -v /$PWD/game-server.pck:/godot/game-server.pck \
+  -u godot \
+  leiterjakab/godot-server-alpine
+```
