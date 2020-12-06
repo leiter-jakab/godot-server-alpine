@@ -10,6 +10,8 @@ RUN apk add --no-cache binutils curl unzip \
 
 FROM leiterjakab/alpine-glibc
 
+ARG GODOT_VERSION=3.2.3
+
 RUN addgroup godot \
 	&& adduser -G godot -D godot
 
